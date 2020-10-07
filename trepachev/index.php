@@ -2,6 +2,7 @@
 require_once 'employee_2.php';
 require_once 'City.php';
 require_once 'Student_12.php';
+require_once 'Arr_13.php';
 
 
 $obj = new Employee('Ivan', 35, 2100);
@@ -24,4 +25,8 @@ $student = new Student_12('Petr');
 echo $student->getCourse() . ' | ' . $student->getName() . '<hr>';
 
 
+$numbers = new Arr_13();
+$numbers->add($array = [1, 5, 7, 7]);
+var_dump($numbers->getNumbers());
+echo $numbers->getAvg();
 ?>
