@@ -1,6 +1,7 @@
 <?php
 require_once 'employee_2.php';
 require_once 'City.php';
+require_once 'Student_12.php';
 
 
 $obj = new Employee('Ivan', 35, 2100);
@@ -18,4 +19,9 @@ $cities = [
 foreach($cities as $city){
     echo $city->getName() . ' _|_ ' . $city->getPopulation() . '<br>';
 }
+
+$student = new Student_12('Petr');
+echo $student->getCourse() . ' | ' . $student->getName() . '<hr>';
+
+
 ?>
