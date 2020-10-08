@@ -3,7 +3,7 @@ require_once 'employee_2.php';
 require_once 'City.php';
 require_once 'Student_12.php';
 require_once 'Arr_13.php';
-
+require_once 'City_14.php';
 
 $obj = new Employee('Ivan', 35, 2100);
 $obj2 = new Employee('Eygeen', 23, 2000);
@@ -28,5 +28,16 @@ echo $student->getCourse() . ' | ' . $student->getName() . '<hr>';
 $numbers = new Arr_13();
 $numbers->add($array = [1, 5, 7, 7]);
 var_dump($numbers->getNumbers());
-echo $numbers->getAvg();
+echo $numbers->getAvg() . '<hr>';
+
+$city = new City_14('Minsk', 1067, '9mln');
+$city_2 = new City_14('Piter', 1603, '24mln');
+$props = [
+    'name',
+    'foundation',
+    'population'
+];
+foreach($props as $prop){
+    echo $city->$prop . '<hr>';
+}
 ?>
