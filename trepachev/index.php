@@ -4,6 +4,8 @@ require_once 'City.php';
 require_once 'Student_12.php';
 require_once 'Arr_13.php';
 require_once 'City_14.php';
+require_once 'ArrayMethodChain.php';
+
 
 $obj = new Employee('Ivan', 35, 2100);
 $obj2 = new Employee('Eygeen', 23, 2000);
@@ -40,4 +42,15 @@ $props = [
 foreach($props as $prop){
     echo $city->$prop . '<hr>';
 }
+
+$arrChain = new ArrayMethodChain();
+echo $arrChain->add(1)->add(2)->add(5)->getSum() . '<br>';
+var_dump($arrChain);
+echo '<br>';
+$extraArray=[5,7,9,12,3];
+echo $arrChain->add(3)->append($extraArray)->add(6)->getSum() . '<br>';
+var_dump($arrChain);
+
+
+
 ?>
