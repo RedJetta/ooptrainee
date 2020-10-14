@@ -19,7 +19,10 @@ class User
      */
     public function setName($name)
     {
-        $this->name = $name;
+
+        if(strlen($name)>=3) {
+            $this->name = $name;
+        }else return false;
     }
 
     /**

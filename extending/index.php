@@ -5,7 +5,7 @@ require_once 'Programmer.php';
 require_once 'Driver.php';
 
 $proger = new Programmer();
-$proger->setName('Maxim');
+$proger->setName('Maximilliano');
 $proger->setAge(21);
 $proger->setSalary(2500);
 $proger->setLangs(['html','php','js']);
@@ -26,3 +26,6 @@ echo $driver->getAge();
 echo $driver->getSalary();
 echo $driver->getDriverExp();
 print_r($driver->getCategory());
+$emp = new Employee();
+$emp->setName('VasyaPidoras');
+echo '<hr>' . $emp->getName() . '<hr>';
