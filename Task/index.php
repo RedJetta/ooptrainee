@@ -9,19 +9,21 @@ $cheese = new Product('Cheese', 45, 40);
 
 $cart = new Cart;
 $cart->add($butter)->add($meat)->add($cheese);
+dumper($cart);
+$cart->remove('Cheese');
+dumper($cart);
+$bread = new Product('Bread', 5, 70);
+$cart->add($bread);
+dumper($cart);
+$cart->remove('Bread');
+$nutella = new Product('Nutella', 90, 30);
+$cart->add($nutella);
+dumper($cart);
+echo $cart->getTotalCost();
+echo '<hr>';
+$cart->getTotalQuantity();
+echo $cart->getAvgPrice();
 
-//dumper($cart);
-
-//foreach ($cart->getProducts() as $product){
-//    dumper($product);
-//}
-
-foreach ($cart->getProducts() as $product){
-    $array = (array) $product;
-    dumper($array);
-    extract($array);
-    echo '<hr>';
-}
 
 
 
