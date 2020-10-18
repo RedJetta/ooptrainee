@@ -6,7 +6,9 @@ class Cart
     private $products = [];
 
     public function add($product){
-        $this->products[] = $product;
+        if (!in_array($product, $this->products, true)) {
+            $this->products[] = $product;
+        }
         return $this;
     }
 
@@ -42,9 +44,16 @@ class Cart
         $count = count($this->getProducts());
         return $avg = $total/$count;
     }
-    /**
-     * @return array
-     */
+
+//    public function exists($newProduct){
+//        foreach ($this->products as $product){
+//            if ($product == $newProduct){
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
     public function getProducts()
     {
         return $this->products;
