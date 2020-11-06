@@ -27,6 +27,7 @@ $cart->add($nutella); //не добавит
 $cart->add($nutella); //не добавит
 $cart->add($corn = new Product('Corn', 7, 85));
 dumper($cart);
+var_dump($cart instanceof Product);
 
 
 

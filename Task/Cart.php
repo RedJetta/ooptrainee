@@ -5,7 +5,7 @@ class Cart
 {
     private $products = [];
 
-    public function add($product){
+    public function add(Product $product){
         if (!in_array($product, $this->products, true)) {
             $this->products[] = $product;
         }

@@ -1,7 +1,9 @@
 <?php
 
 
-class iFigure3D
+interface iFigure3D
 {
-
+    public function __construct($a);
+    public function getVolume();
+    public function getSurfaceSquare();
 }

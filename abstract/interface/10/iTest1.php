@@ -1,7 +1,7 @@
 <?php
 
 
-class iTest1
+interface iTest1
 {
 
 }

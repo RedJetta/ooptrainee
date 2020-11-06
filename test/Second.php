@@ -1,7 +1,7 @@
 <?php
 
 
-class Second
+class Second extends AbstractClass
 {
 
 }
