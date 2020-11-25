@@ -3,7 +3,7 @@
 
 class Test2
 {
-    use Trait1, Trait2, Trait3{
+    use Trait1, Trait2, Trait3, Trait5{
         Trait1::method insteadof Trait2, Trait3;
         Trait2::method as method2;
         Trait3::method as method3;
